@@ -17,7 +17,7 @@ return new class extends Migration
             $table->foreignId('author_id')->constrained()->ondelete('cascade');
             $table->text('description')->nullable();
             $table->integer('progress')->default(0);
-            $table->date('date_added')->usecurrent();
+            $table->date('date_added')->default(now());
             $table->date('started_reading')->nullable();
             $table->date('finished_reading')->nullable();
             $table->timestamps();

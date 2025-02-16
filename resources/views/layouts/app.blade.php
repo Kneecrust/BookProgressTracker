@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book Progress Tracker</title>
     @vite('resources/css/app.css')
+    <style>
+        [x-cloak] { display: none !important; }
+    </style>
 </head>
 <body class="bg-gray-100 text-gray-900 dark:bg-gray-900 dark:text-gray-100">
 <!-- Navigation Menu -->
@@ -16,7 +19,12 @@
         <!-- Centered Menu -->
         <div class="flex justify-center space-x-6 text-xl">
             <a href="{{ route('home') }}" class="text-gray-700 dark:text-gray-300 hover:text-blue-500">Home</a>
-            <a href="{{ route('books.index') }}" class="text-gray-700 dark:text-gray-300 hover:text-blue-500">Books</a>
+            <div class="relative group">
+                <a href="{{ route('books.index') }}"
+                   class="text-gray-700 dark:text-gray-300 hover:text-blue-500">
+                    Books
+                </a>
+            </div>
             <a href="{{ route('authors.index') }}" class="text-gray-700 dark:text-gray-300 hover:text-blue-500">Authors</a>
             <a href="{{ route('genres.index') }}" class="text-gray-700 dark:text-gray-300 hover:text-blue-500">Genres</a>
         </div>
@@ -55,5 +63,7 @@
         });
     });
 </script>
+<script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+
 </body>
 </html>

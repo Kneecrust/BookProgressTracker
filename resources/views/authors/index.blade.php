@@ -5,7 +5,7 @@
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         @foreach ($authors as $author)
-            <div class="p-4 border rounded shadow bg-white">
+            <div class="p-4 border rounded shadow bg-white dark:bg-gray-700 dark:text-gray-200">
                 <h2 class="text-xl font-semibold">{{ $author->name }}</h2>
                 <p class="text-gray-600">{{ $author->books->count() }} books</p>
                 @if ($author->books->count() > 0)
